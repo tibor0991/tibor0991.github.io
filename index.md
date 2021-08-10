@@ -11,10 +11,10 @@ layout: default
 
 # About Me
 
-Lorem ipsum
+
 
 ***
 
-# Work Experience
+# Experience
 
 *** 
