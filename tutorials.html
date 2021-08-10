@@ -1,0 +1,14 @@
+---
+title: Tutorials
+layout: default
+---
+
+{% for post in site.posts %}
+<article>
+<a href="{{post.url}}" class="button">
+<h2>{{post.title}}</h2>
+<hr>
+<p>{{post.excerpt}}</p>
+</a>
+</article>
+{% endfor %}

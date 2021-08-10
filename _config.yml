@@ -35,6 +35,13 @@ linkedin_username: gianfranco-damato
 # theme: minima
 plugins:
   - jekyll-feed
+  
+collections_dir: articles  
+
+collections:
+    projects:
+        output: true
+    experiments:
 
 # Exclude from processing.
 # The following items will not be processed, by default.

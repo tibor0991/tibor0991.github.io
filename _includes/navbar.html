@@ -1,7 +1,11 @@
-<nav>
-	<ul>
-	{% for item in site.data.navbar %}
-		<li><a href="{{ item.link }}">{{item.name}}</a></li>
-	{% endfor %}
-	</ul>
-</nav>
+<header>
+	<h1>{{site.title}}</h1>
+	<nav>
+		<ul>
+		{% for item in site.data.navbar %}
+			<li><a href="{{ item.link }}" class="button">{{item.name}}</a></li>
+		{% endfor %}
+		</ul>
+	</nav>
+	<hr>
+</header>

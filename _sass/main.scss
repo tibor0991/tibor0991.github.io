@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
+
+$corner-radius: 15px;
+$dark-grey: #333333;
+$light-grey: #BBBBBB;
+$yellow: #ffdd00;
+
+$line-thickness: 1px;
+
+$header-font: 'Poppins', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+:is(h1,h2,h3,h4,h5,h6, .button) {
+	font-family: $header-font;
+}
+
+:is(p) {
+	font-family: $body-font;
+	line-height: 2;
+}
+
+@mixin button {
+	display: inline-block;
+	color: white;
+	background-color: $dark-grey;
+	border-radius: $corner-radius;
+	text-decoration: none;
+}
+
+.button {
+	@include button;
+	padding: 0.5em 1em;	
+}
+
+.button:hover {
+	background-color: #ffdd00;
+	color: black;
+	font-weight: bold;
+}
+
+.button--square {
+	border-radius: $corner-radius;
+	display: block;
+	width: 15em;
+	height: 15em;
+	padding: 1em;
+	background-size: 100%;
+	filter: grayscale(100%);
+	text-decoration: none;
+	color: white;
+}
+
+.button--square:hover {
+	filter: grayscale(0%);
+}
+
+.credits {
+	color: #BBBBBB;
+	text-align: right;
+}
+
+nav {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	li {
+		float: left;
+		margin: 0.25em;
+	}
+}
+
+hr {
+	border: none;
+    height: $line-thickness;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+
