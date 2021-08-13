@@ -9,7 +9,7 @@ layout: default
 	{% for project in site.projects %}
 		<div style="margin: 1em;">
 			<a href="{{project.url}}" class="button--square" style=" background-image: url({{project.preview}});">
-			<div style="position:absolute; bottom: 0">			
+			<div style="text-shadow: 2px 2px black;">			
 				<h2 align="right">{{project.title}}</h2>
 				<hr style="background-color: white; height: 0.5em;">
 				<p>{{project.short-description}}</p>
@@ -26,5 +26,8 @@ layout: default
 <br>
 <section>
 <h1>Tools</h1>
+<ul>
+	<li><p>Gradient Strip Exporter</p></li>
+</ul>
 </section>
 <br>

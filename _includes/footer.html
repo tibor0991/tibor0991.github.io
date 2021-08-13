@@ -1,4 +1,13 @@
 <footer>
+    <hr>
+    <div style="display: flex;">
+        <div style="width: 60%;">
+            {% for contact in site.data.contacts %}
+                <i class="{{ contact.fa-icon }}" style="font-size:xx-large;"></i>
+            {% endfor %}
+        </div>
+            
+        <div style="width: 40%;"><p class="credits">© {{ 'now' | date: "%Y" }} {{ site.author }}</p></div>
+    </div>
 
-<p class="credits">© {{ 'now' | date: "%Y" }} {{ site.author }}</h6>
 </footer>
