@@ -3,12 +3,24 @@ title: Tutorials
 layout: default
 ---
 
-{% for post in site.posts %}
-<article>
-<a href="{{post.url}}" class="button">
-<h2>{{post.title}}</h2>
-<hr>
-<p>{{post.excerpt}}</p>
-</a>
-</article>
-{% endfor %}
+<section class=container>
+    <h1 class="text-center">{{page.title}}</h1>
+    {% for post in site.posts %}
+    <article>
+        <div class="card">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="https://image.flaticon.com/icons/png/512/44/44289.png" class="img-fluid">
+                </div>
+                <div class="col-sm-8">
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title">{{post.title}}</h2>
+                        <p class="card-text">{{post.excerpt}}</p>
+                        <a href="{{post.url}}" class="btn btn-primary mt-auto">Read more...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+</section>

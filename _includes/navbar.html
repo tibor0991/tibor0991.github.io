@@ -1,12 +1,14 @@
 <header>
-	<h1 align="center">{{site.title}}</h1>
-	<h4 align="center" style="color: #BBBBBB">{{site.description}}</h2>
-	<nav>
-		<ul>
+	<div id="#SiteTitle" class="container">
+		<h1 align="center">{{site.title}}</h1>
+		<h4 align="center" style="color: #BBBBBB">{{site.description}}</h4>
+	</div>
+	<nav  class="navbar">
+		<div class="container justify-content-start">
 		{% for item in site.data.navbar %}
-			<li><a href="{{ item.link }}" class="button">{{item.name}}</a></li>
+			<a class="btn btn-primary btn-lg me-2" href="{{ item.link }}" role="button">{{item.name}}</a>
 		{% endfor %}
-		</ul>
+		</div>
 	</nav>
 	<hr>
 </header>

@@ -3,28 +3,41 @@ title: Portfolio
 layout: default
 ---
 
-<section>
+<section class="container">
 <h1>Projects</h1>
-	<div style="display:flex;">
-	{% for project in site.projects %}
-		<div style="margin: 1em;">
-			<a href="{{project.url}}" class="button--square" style=" background-image: url({{project.preview}});">
-			<div style="text-shadow: 2px 2px black;">			
-				<h2 align="right">{{project.title}}</h2>
-				<hr style="background-color: white; height: 0.5em;">
-				<p>{{project.short-description}}</p>
+	<div class="row row-cols-3 g-4">
+		{% for project in site.projects %}
+		<div class="col">
+			<div class="card h-100">
+				<img src="{{project.preview}}" class="card-img-top">
+				<div class="card-body d-flex flex-column">
+					<h2 class="card-title">{{project.title}}</h2>
+					<p class="card-text">{{project.short-description}}</p>
+					<a href="{{project.url}}" class="btn btn-primary stretched-link mt-auto">Read more</a>
+				</div>
 			</div>
-			</a>
 		</div>
-	{% endfor %}
+		{% endfor %}
 	</div>
 </section>
 <br>
-<section>
+<section class="container">
 <h1>Samples & Experiments</h1>
+	<div class="row row-cols-8 g-4">
+		<div class="col-2">
+			<div class="card h-100">
+				<img src="{{project.preview}}" class="card-img-top">
+				<div class="card-body d-flex flex-column">
+					<h2 class="card-title">{{project.title}}</h2>
+					<p class="card-text">{{project.short-description}}</p>
+					<a href="{{project.url}}" class="btn btn-primary stretched-link mt-auto">Read more</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 <br>
-<section>
+<section class="container">
 <h1>Tools</h1>
 <ul>
 	<li><p>Gradient Strip Exporter</p></li>
