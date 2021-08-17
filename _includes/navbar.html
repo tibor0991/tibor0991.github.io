@@ -1,14 +1,21 @@
 <header>
-	<div id="#SiteTitle" class="container">
-		<h1 align="center">{{site.title}}</h1>
-		<h4 align="center" style="color: #BBBBBB">{{site.description}}</h4>
-	</div>
-	<nav  class="navbar">
-		<div class="container justify-content-start">
-		{% for item in site.data.navbar %}
-			<a class="btn btn-primary btn-lg me-2" href="{{ item.link }}" role="button">{{item.name}}</a>
-		{% endfor %}
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="/"><h1>{{site.title}}</h1></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<div class="navbar-nav">
+				{% for item in site.data.navbar %}
+					{% if page.url == item.link %}
+						<a href="{{item.link}}" class="nav-link active">{{item.name}}</a>
+					{% else %}
+						<a href="{{item.link}}" class="nav-link">{{item.name}}</a>
+					{% endif %}
+				{% endfor %}
+				</div>
+			</div>
 		</div>
 	</nav>
-	<hr>
 </header>

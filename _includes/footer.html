@@ -1,13 +1,33 @@
-<footer>
-    <hr>
-    <div>
-        <div>
+<!--<footer class="fixed-bottom">
+    <div class="container bg-light">
+        <div class="hstack gap-3">
             {% for contact in site.data.contacts %}
-                <i class="{{ contact.fa-icon }}" style="font-size:xx-large;"></i>
-            {% endfor %}
+            <a href="{{contact.href}}{{contact.id}}" class="btn btn-secondary align-middle">
+                <i class="{{ contact.fa-icon }}"></i>
+            </a>
+            {% endfor %}      
+            <div class="vr"></div>      
+            <p class="text-muted">© {{ 'now' | date: "%Y" }} {{ site.author }}</p>
         </div>
-            
-        <div><p>© {{ 'now' | date: "%Y" }} {{ site.author }}</p></div>
     </div>
+</div>
+</footer>-->
 
+<footer class="border-top fixed-bottom container-fluid bg-light">
+    <div class="container">
+        <div class="row py-2">
+            <div class="col-lg-auto p-1 d-flex justify-content-center">
+                <div class="hstack gap-3">
+                {% for contact in site.data.contacts %}
+                    <a href="{{contact.href}}{{contact.id}}" class="btn btn-secondary">
+                        <i class="{{ contact.fa-icon }}"></i>
+                    </a>
+                {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg p-1 d-flex justify-content-lg-end justify-content-center">
+                <p class="text-muted my-2">© {{ 'now' | date: "%Y" }} {{ site.author }}</p>
+            </div>
+        </div>
+    </div>
 </footer>

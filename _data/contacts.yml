@@ -1,23 +1,23 @@
 - type: email
-  id: 'your.name@yoursite.com'
+  id: 'gianfranco.damato90@gmail.com'
   href: 'mailto:'
   title: 'Email'
-  fa-icon: 'fa fa-envelope-square'
-
-- type: facebook
-  id: 'your-facebook-username'
-  href: 'https://www.facebook.com/'
-  title: 'Facebook'
-  fa-icon: 'fa fa-facebook-square'
+  fa-icon: 'bi bi-envelope'
 
 - type: twitter
-  id: 'your-twitter-name'
+  id: 'tibor0991'
   href: 'https://www.twitter.com/'
   title: 'Twitter'
-  fa-icon: 'fa fa-twitter-square'
+  fa-icon: 'bi bi-twitter'
 
 - type: github
-  id: 'your-github-name'
+  id: 'tibor0991'
   href: 'https://github.com/'
   title: 'GitHub'
-  fa-icon: 'fa fa-github-square'
+  fa-icon: 'bi bi-github'
+
+- type: linkedin
+  id: 'gianfranco-damato'
+  href: 'https://www.linkedin.com/in/'
+  title: 'LinkedIn'
+  fa-icon: 'bi bi-linkedin'
