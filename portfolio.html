@@ -5,15 +5,18 @@ layout: default
 
 <section>
 <h1>Projects</h1>
-	<div class="row row-cols-3 g-4">
+<p>These are the projects that I've developed in the past; click on each card to know more.</p>
+	<div class="row row-cols-1 row-cols-md-4 g-4">
 		{% for project in site.projects %}
 		<div class="col">
-			<div class="card h-100">
+			<div class="card shadow h-100">
 				<img src="{{project.preview}}" class="card-img-top">
-				<div class="card-body d-flex flex-column">
-					<h2 class="card-title">{{project.title}}</h2>
-					<p class="card-text">{{project.short-description}}</p>
-					<a href="{{project.url}}" class="btn btn-primary stretched-link mt-auto">Read more</a>
+				<div class="card-body">
+						<h2 class="card-title">{{project.title}}</h2>
+						<p class="card-text">{{project.short-description}}</p>
+				</div>
+				<div class="p-4 text-end">
+					<a href="{{project.url}}" class="btn btn-primary">Read more</a>
 				</div>
 			</div>
 		</div>

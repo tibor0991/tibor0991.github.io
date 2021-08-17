@@ -5,22 +5,36 @@ layout: default
 
 <section>
     <h1 class="text-center">{{page.title}}</h1>
-    {% for post in site.posts %}
-    <article>
-        <div class="card">
-            <div class="row d-flex">
-                <div class="col-sm-4 flex-shrink-0">
-                    <img src="https://image.flaticon.com/icons/png/512/44/44289.png" class="card-img img-fluid">
-                </div>
-                <div class="col-sm-8 flex-grow-1">
-                    <div class="card-body">
-                        <h2 class="card-title">{{post.title}}</h2>
-                        <p class="card-text">{{post.excerpt}}</p>
-                        <a href="{{post.url}}" class="btn btn-primary">Read more...</a>
+    <div class="vstack gap-3">
+        {% for post in site.posts %}
+        <article>
+            <div class="card shadow">
+                <div class="row mx-0">
+                    <div class="col-lg-2 p-0" >
+                        {% if post.preview %}                       
+                            <svg class="rounded" width="100%" height="100%" style="background-image: url('{{post.preview}}'); background-size: cover; background-position: center;" >
+
+                            </svg>
+                        {% else %}
+                            <svg class="rounded" width="100%" height="100%">
+                                <rect width="100%" height="100%" style="fill:gray;"></rect>
+                                <text x="50%" y="50%" text-anchor="middle" style="fill:white;">No thumbnail available</text>
+                            </svg>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="col p-0">
+                        <div class="card-body">
+                            <a href={{post.url}} class="card-title h2 stretched-link">{{post.title}}</a>
+                            <p class="card-text">{{post.excerpt}}</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last update: {{post.date | date: "%Y-%m-%d %H:%M"}}</small>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </article>
-    {% endfor %}
+        </article>
+        {% endfor %}
+    </div>
 </section>
