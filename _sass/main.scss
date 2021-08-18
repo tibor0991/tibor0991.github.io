@@ -1,14 +1,7 @@
-$corner-radius: 15px;
-$dark-grey: #333333;
-$light-grey: #BBBBBB;
-$yellow: #ffdd00;
-
-$line-thickness: 1px;
-
 $header-font: 'Poppins', sans-serif;
 $body-font: 'Open Sans', sans-serif;
 
-:is(h1,h2,h3,h4,h5,h6, .button) {
+:is(h1,h2,h3,h4,h5,h6) {
 	font-family: $header-font;
 }
 

@@ -1,11 +1,11 @@
-<footer class="border-top container-fluid bg-light">
+<footer class="border-top container-fluid bg-dark fixed-bottom">
     <div class="container">
         <div class="row py-2">
             <div class="col-lg-auto p-1 d-flex justify-content-center">
                 <div class="hstack gap-3">
                 {% for contact in site.data.contacts %}
-                    <a href="{{contact.href}}{{contact.id}}" class="btn btn-secondary">
-                        <i class="{{ contact.fa-icon }}"></i>
+                    <a href="{{contact.href}}{{contact.id}}">
+                        <i class="{{ contact.fa-icon }}  text-light fs-2" style="vertical-align: 0.125em;"></i>
                     </a>
                 {% endfor %}
                 </div>
