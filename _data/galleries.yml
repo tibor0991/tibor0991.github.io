@@ -1,0 +1,17 @@
+- 
+  name: TOMMI
+  base-path: '/assets/img/TOMMI/gallery/'
+  images:
+    - 'Bubbles.png'
+    - 'The Chamaflies.png'
+    - 'The Dragon.png'
+    - 'Drums.png'
+
+- 
+  name: AREAL
+  base-path: '/assets/img/AREAL/gallery/'
+  images:
+    - 'act1.jpg'
+    - 'act2.jpg'
+    - 'act3.jpg'
+

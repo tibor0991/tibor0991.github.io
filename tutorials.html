@@ -6,35 +6,8 @@ layout: default
 <section>
     <h1 class="text-center">{{page.title}}</h1>
     <div class="vstack gap-3">
-        {% for post in site.posts %}
-        <article>
-            <div class="card shadow">
-                <div class="row mx-0">
-                    <div class="col-lg-2 p-0" >
-                        {% if post.preview %}                       
-                            <svg width="100%" height="100%" style="background-image: url('{{post.preview}}'); background-size: cover; background-position: center;" >
-
-                            </svg>
-                        {% else %}
-                            <svg width="100%" height="100%">
-                                <rect width="100%" height="100%" style="fill:gray;"></rect>
-                                <text x="50%" y="50%" text-anchor="middle" style="fill:white;">No thumbnail available</text>
-                            </svg>
-                        {% endif %}
-                    </div>
-                    
-                    <div class="col p-0">
-                        <div class="card-body">
-                            <a href={{post.url}} class="card-title h2 stretched-link">{{post.title}}</a>
-                            <p class="card-text">{{post.excerpt}}</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last update: {{post.date | date: "%Y-%m-%d %H:%M"}}</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
+        {% for p in site.posts %}
+            {% include article_template.html post = p %}
         {% endfor %}
     </div>
 </section>

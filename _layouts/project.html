@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% assign currentGallery = site.data.galleries | where: "name",page.gallery-name | first %}
+{% assign gallerySize = currentGallery.images.size | minus: 1 %}
+
+<div id="projectGallery" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">     
+      {% for i in (0..gallerySize) %}
+        <button type="button" data-bs-target="#projectGallery" data-bs-slide-to="{{i}}" aria-label="Slide {{i}}" {% if i == 0 %} class="active" aria-current="true" {% endif %}></button>
+      {% endfor %}
+    </div>
+
+    <div class="carousel-inner ratio ratio-16x9">
+      {% for i in (0..gallerySize) %}
+        <div class="carousel-item {% if i == 0 %} active {% endif %}">
+            <img src="{{currentGallery.base-path}}{{currentGallery.images[i]}}" style="width:100%; height:100%; object-fit: cover;">
+        </div>
+      {% endfor %}
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#projectGallery" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#projectGallery" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+{{ content }}

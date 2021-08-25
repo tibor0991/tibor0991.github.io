@@ -2,22 +2,22 @@
   id: 'gianfranco.damato90@gmail.com'
   href: 'mailto:'
   title: 'Email'
-  fa-icon: 'bi bi-envelope'
+  fa-icon: 'fas fa-envelope'
 
 - type: twitter
   id: 'tibor0991'
   href: 'https://www.twitter.com/'
   title: 'Twitter'
-  fa-icon: 'bi bi-twitter'
+  fa-icon: 'fab fa-twitter'
 
 - type: github
   id: 'tibor0991'
   href: 'https://github.com/'
   title: 'GitHub'
-  fa-icon: 'bi bi-github'
+  fa-icon: 'fab fa-github'
 
 - type: linkedin
   id: 'gianfranco-damato'
   href: 'https://www.linkedin.com/in/'
   title: 'LinkedIn'
-  fa-icon: 'bi bi-linkedin'
+  fa-icon: 'fab fa-linkedin'
