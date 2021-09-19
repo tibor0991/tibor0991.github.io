@@ -3,27 +3,97 @@ title: Home
 layout: default
 ---
 
-{% capture about-text %}
-Hello, I am Gianfranco Damato, a software developer with a penchant for **Game Development**, **Embedded Programming** and **Front-end Development**. 
-{% endcapture %}
+<section id="aboutme" class="mb-4">        
+        {% include section-header.html title="About me" %}
 
-{{ about-text | markdownify }}
+        <div class="container">    
+            <div class="row justify-content-center g-2">
+                <!--<div class="col col-lg-2">
+                    <div class="ratio ratio-1x1 rounded-circle" style="background-size: cover; background-position: top; background-image: url('assets/img/propic/DAMATO.jpg'); box-shadow: inset 0px 0px 8px #333;">
+                    </div>
+                </div>-->
+                <div class="col-lg-8 col-sm" style="text-align: justify;">
+                    <p>
+                        I am Gianfranco Damato, a software developer with a penchant for <strong>Game Development</strong>, <strong>Front-End Development</strong> and <strong>Embedded programming</strong>.  
+                        Here you'll find some tutorials about my favourite topics, as well as my portfolio.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center g-2" id="callToAction">
+                <div class="col-auto">
+                    <div class="btn-grp">
+                        <button type="button" class="btn btn-outline-dark dropdown-toggle shadow" data-bs-toggle="dropdown" aria-expanded="false">
+                            Download my Resume
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Italian</a></li>
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-outline-dark shadow">
+                        Check out my Portfolio
+                    </button>
+                </div>
+                <div class="col-auto">
+                    <a href="#contacts" class="btn btn-outline-dark shadow">
+                        Contact me!
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
+</section>
 
-<div class="d-flex justify-content-center">
-    <div class="btn-grp">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            Download my Resume
-        </button>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Italian</a></li>
-            <li><a class="dropdown-item" href="#">English</a></li>
-          </ul>
+<section id="interests">
+    {% include section-header.html title="Topics" %}
+
+    <div class="container vstack gap-2">
+        {% for topic in site.data.topics %}
+            <div class="border rounded p-2">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2>{{topic.title}}</h2>
+                        <p>{{topic.description}}</p>
+                        <p class="text-muted my-0 border-top">
+                            Keywords:
+                        </p>
+                        <div class="container g-2">
+                            {% for kw in topic.keywords %}
+                                <span class="badge rounded-pill bg-dark">{{kw}}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="{{topic.cover-image}}" class="rounded" style="object-fit: cover; object-position: center; width:100%; aspect-ratio: 2/1;">
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        
     </div>
-</div>
+</section>
 
-<hr>
-
-<section>
-    <h1>Latest post</h1>
+<section id="blog">
+    {% include section-header.html title="Latest article" %}
+    <div class="container">
         {% include article_template.html post = site.posts.first %}
+    </div>
+</section>
+
+<section id="contacts">
+    {% include section-header.html title="Contacts" %}
+    <div class="container">
+        <p class="text-center">Need help with your project? Looking for a skilled developer? Feel free to contact me any time!</p>
+        <div class="d-flex justify-content-center gap-2">
+            {% for contact in site.data.contacts %}
+                <a href="{{contact.href}}{{contact.id}}" class="btn btn-outline-dark shadow">
+                    <i class="{{contact.fa-icon}}"></i>
+                    {{contact.title}}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
 </section>

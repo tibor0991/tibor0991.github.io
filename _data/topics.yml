@@ -1,0 +1,32 @@
+- title: Unity Development
+  description: I have started using Unity in late 2016, and since then I've gained expertise in all of its aspects, be it animation, gameplay programming patterns or shaders.
+  cover-image: ./assets/img/topics/Unity.jpg
+  keywords: 
+    - Visual Scripting
+    - Shaders (HLSL)
+    - Shadergraph
+    - Editor Extensions
+    - Animation
+    - Renderer Features
+    - Scriptable Objects
+
+- title: Front-End Development
+  description: A skill that I've picked up again after a while and that I'd like to focus on.
+  cover-image: ./assets/img/topics/frontend.jpg
+  keywords:
+    - React
+    - Bootstrap
+    - HTML5
+    - CSS3
+    - Sass
+    - Jekyll
+    - Liquid
+
+- title: Embedded Programming
+  description: I have developed a few projects in the past using Arduino boards and Raspberry PI, and I have enough knowledge of electrical engineering to design my own circuits.
+  cover-image: ./assets/img/topics/Arduino.jpg
+  keywords:
+    - IoT
+    - Arduino
+    - Raspberry PI
+    - SoC
