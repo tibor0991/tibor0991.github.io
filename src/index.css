@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :is(html){
+        width: 100%;
+        height:100%;
+        background-color: #4158D0;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        background-attachment: fixed;
+
+    }
+
+    .navbar-item {
+        @apply transition duration-200;
+        @apply mx-5 px-1 pt-4 text-lg font-header font-bold text-white border-b-4 border-transparent;
+        @apply hover:border-white;
+    }
+
+    .btn {
+        @apply transition duration-100;
+        @apply text-black font-bold text-lg bg-white rounded-lg mix-blend-screen px-2 py-1 mx-4 border-2 border-black shadow-lg;
+        @apply hover:bg-black hover:text-white hover:border-white;
+        @apply active:bg-white active:text-black;
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
