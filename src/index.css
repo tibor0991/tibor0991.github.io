@@ -8,10 +8,8 @@
     :is(html){
         width: 100%;
         height:100%;
-        background-color: #4158D0;
         background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
         background-attachment: fixed;
-
     }
 
     .navbar-item {
@@ -26,6 +24,11 @@
         @apply hover:bg-black hover:text-white hover:border-white;
         @apply active:bg-white active:text-black;
     }
+
+    :is(h1) {
+        @apply pb-2 text-5xl;
+    }
+
 }
 
 
