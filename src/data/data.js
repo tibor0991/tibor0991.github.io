@@ -40,11 +40,6 @@ export const Contacts = [
         icon: faGithub
     },
     {
-        sitename: 'E-Mail',
-        username: 'gianfranco.damato90@gmail.com',
-        icon: faEnvelope
-    },
-    {
         sitename: 'LinkedIn',
         username: 'gian-damato',
         icon: faLinkedin

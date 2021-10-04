@@ -8,7 +8,7 @@ export const Home = () =>
       <p>Cillum ad duis ex enim do voluptate aliqua ut ad. Qui ipsum aliquip et duis anim enim aute eu adipisicing duis officia aliqua sit commodo. Aliqua culpa reprehenderit et ullamco consequat nostrud reprehenderit excepteur ut sit. Laborum quis deserunt aliqua laboris aliqua.
 
         Et deserunt ea anim in sit tempor duis exercitation magna excepteur cillum sit voluptate. Minim labore voluptate consequat nostrud pariatur excepteur laboris voluptate. Ut incididunt aute amet cupidatat tempor dolore commodo ea incididunt. In ipsum deserunt quis laborum consectetur in voluptate. Velit anim esse esse Lorem minim cupidatat officia ullamco ea aliqua ad.</p>
-    <div className="container mx-auto my-2 flex flex-col md:flex-row justify-center">
+    <div className="container mx-auto flex flex-col md:flex-row justify-center">
       <Button>
         Download my CV
       </Button>
@@ -33,15 +33,15 @@ export const Home = () =>
       </div>
     </Section>  
     <Section title="Contacts">
-      <div className="grid grid-rows-1 grid-cols-2">
+      <div className="flex flex-row">
         <div>
-          <p>Need help for your next big project?</p>
+          <p className="mr-0 ml-auto">Commodo ad Lorem labore quis magna voluptate eu excepteur. Anim velit excepteur occaecat laboris veniam nisi adipisicing fugiat quis do et. Cillum Lorem quis elit cupidatat enim duis velit sunt. Et adipisicing occaecat id consequat amet in ex nisi elit nostrud adipisicing Lorem.</p>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col ml-0 mr-auto">
           {
             Contacts.map( (contact) => 
             <Button>
-              <div className="flex gap-2 mx-auto">
+              <div className="flex gap-2">
                 <FontAwesomeIcon icon={contact.icon} size="2x"/>
                 <p className="my-auto">{contact.sitename}</p>
               </div>
