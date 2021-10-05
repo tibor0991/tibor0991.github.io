@@ -66,6 +66,9 @@ export const PortfolioData = {
         }
     ],
     demos : [
+        {
+            name: "Particular Galaxy"
+        }
 
     ]
 }

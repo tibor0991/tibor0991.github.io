@@ -37,7 +37,7 @@ export const Section = (props) =>
 </section>
 
 export const GridView = (props) =>
-<div className="grid lg:grid-cols-4 grid-cols-2 gap-4">
+<div className={`grid lg:grid-cols-${props.columns} grid-cols-${props.columns/2} gap-4`}>
   {props.children}
 </div>
 
@@ -47,7 +47,7 @@ export const ProjectCard = (props) =>
       <img src={props.preview} alt={props.title} className="object-cover filter blur-0 group-hover:blur saturate-100 group-hover:saturate-50"/>
       <div className="grid grid-flow-rows grid-rows-2 text-center p-4 text-shadow">
         <div className="text-4xl font-bold self-end">{props.title}</div>
-        <div className="text-transparent group-hover:text-white self-start transition duration-100 text-shadow-none group-hover:text-shadow">{props.subtitle}</div>
+        <div className="text-xl text-transparent group-hover:text-white self-start transition duration-200 text-shadow-none group-hover:text-shadow">{props.subtitle}</div>
       </div>
   </div>
 </Link>

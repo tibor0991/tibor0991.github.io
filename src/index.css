@@ -29,6 +29,10 @@
         @apply pb-2 text-5xl;
     }
 
+    :is(body) {
+        @apply text-shadow-md;
+    }
+
 }
 
 @layer components {
