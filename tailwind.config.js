@@ -9,9 +9,13 @@ module.exports = {
   },
   variants: {
     extend: {
-      fontWeight: ['hover'],
+      fontWeight: ['hover', 'group-hover'],
       backgroundColor: ['hover', 'active'],
-      textColor: ['active']
+      textColor: ['active', 'group-hover'],
+      borderWidth: ['hover', 'group-hover'],
+      ringWidth: ['hover','group-hover'],
+      blur: ['group-hover'],
+      saturate: ['group-hover']
     },
   },
   plugins: [ require('@tailwindcss/aspect-ratio')],

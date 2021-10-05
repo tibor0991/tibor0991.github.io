@@ -32,6 +32,22 @@ export const Footer = (props) =>{
 
 export const Section = (props) =>
 <section className="container mx-auto flex flex-col gap-2 p-4 text-white">
-  <h1 className="text-center">{props.title}</h1>
+  <h1 className="text-center text-shadow">{props.title}</h1>
   {props.children}
 </section>
+
+export const GridView = (props) =>
+<div className="grid lg:grid-cols-4 grid-cols-2 gap-4">
+  {props.children}
+</div>
+
+export const ProjectCard = (props) =>
+<Link className="group ring-white ring-0 hover:ring-2 shadow rounded-lg overflow-hidden">
+    <div className="aspect-w-1 aspect-h-1">
+      <img src={props.preview} alt={props.title} className="object-cover filter blur-0 group-hover:blur saturate-100 group-hover:saturate-50"/>
+      <div className="grid grid-flow-rows grid-rows-2 text-center p-4 text-shadow">
+        <div className="text-4xl font-bold self-end">{props.title}</div>
+        <div className="text-transparent group-hover:text-white self-start transition duration-100 text-shadow-none group-hover:text-shadow">{props.subtitle}</div>
+      </div>
+  </div>
+</Link>

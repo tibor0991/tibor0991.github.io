@@ -1,14 +1,10 @@
 import { faCode, faEnvelope, faGamepad, faMicrochip } from '@fortawesome/free-solid-svg-icons';
 import {faTwitter, faGithub, faLinkedin } from '@fortawesome/fontawesome-free-brands';
 
-export const Projects = [
-    {
-        title: "TOMMI",
-        subtitle: "A game to feel better",
-        description: "Dolor aliquip amet veniam nulla enim non non sint irure ullamco nostrud. In dolore aliquip elit adipisicing ea laboris dolore deserunt tempor aute. Reprehenderit proident fugiat deserunt nostrud culpa labore consectetur esse adipisicing enim reprehenderit amet. Sint amet sit ullamco adipisicing elit voluptate. Nostrud consequat do voluptate nulla. Anim elit sunt nisi Lorem ut dolore excepteur tempor irure cupidatat incididunt nisi exercitation.",
-    }
-]
-
+import TOMMI from '../img/portfolio/TOMMI.png';
+import AREAL from '../img/portfolio/AREAL.jpg';
+import BOB from '../img/portfolio/BOB.png';
+import NOA from '../img/portfolio/NOA.png';
 
 export const Skills = [
     {
@@ -28,7 +24,7 @@ export const Skills = [
     }
 ]
 
-export const Contacts = [
+export const ContactsData = [
     {
         sitename: 'Twitter',
         username: 'tibor0991',
@@ -45,3 +41,31 @@ export const Contacts = [
         icon: faLinkedin
     }
 ]
+
+export const PortfolioData = {
+    delivered: [
+        {
+            name: "TOMMI",
+            description: "A VR game designed for hospitalized children",
+            preview: TOMMI
+        },
+        {
+            name: "AREAL",
+            description: "A VR game designed for patients undergoing lengthy blood transfusions and developed in collaboration with Novartis",
+            preview: AREAL
+        },
+        {
+            name: "BOB",
+            description: "Prototype for a 3D-Printable, open-source and low-cost incubator",
+            preview: BOB
+        },
+        {
+            name: "NOA",
+            description: "An informative VR experience for patients undergoing MRI",
+            preview: NOA
+        }
+    ],
+    demos : [
+
+    ]
+}

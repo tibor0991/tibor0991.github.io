@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Card, Section } from '../Components';
-import {Skills, Contacts} from '../data/data';
+import {Skills, ContactsData} from '../data/data';
 
 export const Home = () =>
   <div className="flex flex-col gap-4">
@@ -39,7 +39,7 @@ export const Home = () =>
         </div>
         <div className="flex flex-col ml-0 mr-auto">
           {
-            Contacts.map( (contact) => 
+            ContactsData.map( (contact) => 
             <Button>
               <div className="flex gap-2">
                 <FontAwesomeIcon icon={contact.icon} size="2x"/>

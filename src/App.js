@@ -1,5 +1,5 @@
 
-import { Navbar } from './Components';
+import { Navbar, Footer } from './Components';
 import routing_table from './RoutingTable';
 import RouteRenderer from './RouteRenderer';
 
