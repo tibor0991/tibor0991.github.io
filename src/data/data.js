@@ -1,11 +1,6 @@
 import { faCode, faEnvelope, faGamepad, faMicrochip } from '@fortawesome/free-solid-svg-icons';
 import {faTwitter, faGithub, faLinkedin } from '@fortawesome/fontawesome-free-brands';
 
-import TOMMI from '../img/portfolio/TOMMI.png';
-import AREAL from '../img/portfolio/AREAL.jpg';
-import BOB from '../img/portfolio/BOB.png';
-import NOA from '../img/portfolio/NOA.png';
-
 export const Skills = [
     {
         name: "Front-End Development",
@@ -47,22 +42,18 @@ export const PortfolioData = {
         {
             name: "TOMMI",
             description: "A VR game designed for hospitalized children",
-            preview: TOMMI
         },
         {
             name: "AREAL",
             description: "A VR game designed for patients undergoing lengthy blood transfusions and developed in collaboration with Novartis",
-            preview: AREAL
         },
         {
             name: "BOB",
             description: "Prototype for a 3D-Printable, open-source and low-cost incubator",
-            preview: BOB
         },
         {
             name: "NOA",
             description: "An informative VR experience for patients undergoing MRI",
-            preview: NOA
         }
     ],
     demos : [

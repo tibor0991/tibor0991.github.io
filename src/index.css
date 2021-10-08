@@ -29,8 +29,12 @@
         @apply pb-2 text-5xl;
     }
 
+    :is(h2) {
+      @apply text-4xl;
+    }
+
     :is(body) {
-        @apply text-shadow-md;
+        @apply text-shadow-md text-white;
     }
 
 }

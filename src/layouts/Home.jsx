@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Card, Section } from '../Components';
-import {Skills, ContactsData} from '../data/data';
+import HomeData from '../data/homeData.json';
+
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 export const Home = () =>
   <div className="flex flex-col gap-4">
@@ -22,10 +24,10 @@ export const Home = () =>
     </Section>
     <Section title="My Skills">
       <div id="skillcards" className="container mx-auto grid md:grid-cols-3 md:grid-rows-1 md:grid-flow-row grid-flow-col grid-cols-1 grid-rows-3 gap-4">
-        {Skills.map( (skill) => 
+        {HomeData.skills.map( (skill) => 
         <div className="text-white p-4">
           <div className="flex flex-row gap-2 mb-2">
-            <FontAwesomeIcon icon={skill.icon} size="6x"/>
+            <FontAwesomeIcon icon size="6x"/>
             <p className="text-4xl text-center">{skill.name}</p>
           </div>
           <p>{skill.description}</p>
@@ -39,10 +41,10 @@ export const Home = () =>
         </div>
         <div className="flex flex-col ml-0 mr-auto">
           {
-            ContactsData.map( (contact) => 
+            HomeData.contacts.map( (contact) => 
             <Button>
               <div className="flex gap-2">
-                <FontAwesomeIcon icon={contact.icon} size="2x"/>
+                <FontAwesomeIcon icon={['fas', 'code']} size="2x"/>
                 <p className="my-auto">{contact.sitename}</p>
               </div>
             </Button>)
