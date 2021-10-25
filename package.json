@@ -1,0 +1,28 @@
+{
+  "name": "tibor0991.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint-no-cache": "next lint --no-cache"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.3.0",
+    "@tailwindcss/typography": "^0.4.1",
+    "gh-pages": "^3.2.3",
+    "gray-matter": "^4.0.3",
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "eslint": "7.32.0",
+    "eslint-config-next": "^11.1.3-canary.57",
+    "postcss": "^8.3.9",
+    "tailwindcss": "^2.2.16"
+  }
+}
